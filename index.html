@@ -67,7 +67,8 @@
           </section>
         </section>
 
-        <section>
+        <section data-state="blackout">
+          <br>
           <h2>Scaling to mobile</h2>
           <section>
             <br><br>
@@ -90,7 +91,7 @@
           <h2>Embrace Responsive</h2>
           <section>
             <br>
-            <h3>Flexible</h3>
+            <h3 class="fragment">Flexible</h3>
             <ul class="dont fragment">
               <li>Avoid making guesses on the server
             </ul>
@@ -164,14 +165,6 @@
             <p class="fragment">Simple APIs for creating complex layouts</p>
             <p class="fragment">Better compatibility options for old browsers</p>
             <p class="fragment">Live testing helps spot issues more quickly</p>
-          </section>
-          <section>
-            <br>
-            <h3>Drupal</h3>
-            <br>
-            <p class="fragment">Sass and Drupal share community members</p>
-            <p class="fragment">Sass sidesteps issues that Drupal can cause</p>
-            <p class="fragment">Drupal can accommodate many frontend optimizations</p>
           </section>
         </section>
 
@@ -288,6 +281,66 @@
           </section>
           <section>
             <img class="bare" src="img/timing-overview.png" alt="" style="width: 900px; position: relative; top: -30px; ">
+          </section>
+        </section>
+
+        <section data-state="blackout">
+          <br>
+          <h2>Drupal Tools</h2>
+          <br>
+          <h3>What has Drupal solved?</h3>
+        </section>
+
+        <section>
+          <h2>Themes</h2>
+          <section>
+            <p class="fragment">Base theme doesn't matter. However, there are themes with excellent Sass and Compass support</p>
+            <ul class="checks fragment">
+              <li><a href="http://drupal.org/project/aurora">Aurora 7.x-2.x</a> - comes with a Compass extension to set subthemes up, full integration with Compass tools: Susy, Singularity, Respond-to
+              <li><a href="http://drupal.org/project/aurora">Zen 7.x-5.x</a> - includes Zen Grids, works with Susy
+            </ul>
+          </section>
+        </section>
+
+        <section>
+          <h2>JavaScript</h2>
+          <section>
+            <h3>Modernizr 7.x-3.0</h3>
+            <p>Modernizr API<br> Available to all themes and modules.</p>
+            <ul class="fragment checks">
+              <li>Drush commands
+              <li>Libraries API integration
+              <li>Modernizr.load() integration
+            </ul>
+            <br><br>
+            <p class="fragment"><b>Code:</b> <a href="http://drupal.org/project/modernizr">http://drupal.org/project/modernizr</a></p>
+            <br>
+            <p class="example"><small><i>Disclosure: I maintain this Drupal module.</i></small></p>
+          </section>
+          <section>
+            <br>
+            <h3>Speedy</h3>
+            <p>Minify core Drupal JS files to make them smaller and decrease download time.</p>
+            <br>
+            <p class="fragment"><b>Code:</b> <a href="http://drupal.org/project/speedy">http://drupal.org/project/speedy</a></p>
+          </section>
+          <section>
+            <br>
+            <h3>Picturefill</h3>
+            <p>D7 - Module available at <a href="http://drupal.org/project/resp_img">http://drupal.org/project/resp_img</a></p>
+            <br>
+            <p class="fragment">D8 - Core implementation has been committed!<br> <a href="http://drupal.org/node/1775530#comment-6684666">http://drupal.org/node/1775530</a></p>
+            <br>
+            <p class="fragment">Drupal 8 efforts have helped <a href="http://www.w3.org/community/respimg/2012/08/04/picture-in-drupal-8/">influence the formation of this web standard</a></p>
+          </section>
+          <section>
+            <br>
+            <h3>Navigation Timing</h3>
+            <p>Integrates navigation timing into any Drupal site.</p>
+            <br>
+            <p class="fragment">Needs a UI, but provides all the data you need</p>
+            <br>
+            <p class="fragment"><a href="http://drupal.org/project/navigation_timing">http://drupal.org/project/navigation_timing</a></p>
           </section>
         </section>
 
