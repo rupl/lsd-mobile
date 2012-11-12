@@ -1,0 +1,151 @@
+<!doctype html>  
+<html lang="en">
+	
+	<head>
+		<meta charset="utf-8">
+		
+		<title>LSD - Mobile webinar</title>
+
+		<meta name="description" content="LSD - Mobile webinar">
+		<meta name="author" content="Chris Ruppel">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+		
+		<link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+		
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/main.css">
+		<link rel="stylesheet" href="css/print.css" type="text/css" media="print">
+
+		<link rel="stylesheet" href="lib/github.css">
+		<link rel="stylesheet" href="lib/carousel.css">
+	</head>
+	
+	<body>
+		
+		<div class="reveal">
+
+			<!-- Used to fade in a background when a specific slide state is reached -->
+			<div class="state-background"></div>
+			
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section data-state="bluesy">
+          <br><br><br>
+					<h1 style="font-size: 3.2em; ">Mobile Drupal</h1><br><br>
+					<h3>Acquia LSD Webinar</h3>
+					<!-- <p>Presented by <a href="http://twitter.com/rupl">Chris Ruppel</a></p> -->
+					<script>
+						// Delicously hacky. Look away.
+						if( navigator.userAgent.match( /(iPhone|iPad|iPod|Android)/i ) ) document.write( '<p style="color: rgba(0,0,0,0.3); text-shadow: none;">('+'Tap to navigate'+')</p>' );
+					</script>
+				</section>
+
+        <section>
+          <h2>Who am I?</h2>
+          <section>
+            <br><br>
+            <h3>Chris Ruppel</h3>
+            <p>frontend developer</p>
+          </section>
+          <section>
+            <img src="img/4k-logo-square-500px.png" alt="Four Kitchens: we make BIG websites" style="border: 0; box-shadow: none; ">
+          </section>
+          <section>
+            <h3>I do Drupal stuff sometimes:</h3>
+            <ul class="fragment">
+              <li><a href="http://drupal.org/project/modernizr">http://drupal.org/project/modernizr</a>
+              <li><a href="http://drupal.org/project/respondjs">http://drupal.org/project/respondjs</a>
+              <li><a href="http://groups.drupal.org/html5/drupal-8">D8 HTML5 Initative</a>
+              <li><a href="http://groups.drupal.org/mobile/drupal-8">D8 Mobile Initiative</a>
+              <li><a href="http://http://drupal.org/community-initiatives/drupalorg/drupal7">drupal.org D7 upgrade</a>
+              <li><a href="http://drushmake.me">http://drushmake.me</a>
+            </ul>
+          </section>
+        </section>
+
+
+
+        <section data-state="blackout">
+          <h1>Questions?</h1>
+          <br>
+          <p>Contact me:</p>
+          <p><a href="http://drupal.org/user/411999">drupal.org/user/411999</a></p>
+          <p><a href="https://github.com/rupl">github.com/rupl</a></p>
+          <p><a href="http://twitter.com/rupl">twitter.com/rupl</a></p>
+          <p>chris &#x2740; fourkitchens.com</p>
+        </section>
+
+			</div>
+
+			<!-- The navigational controls UI -->
+			<aside class="controls">
+				<a class="left" href="#">&#x25C4;</a>
+				<a class="right" href="#">&#x25BA;</a>
+				<a class="up" href="#">&#x25B2;</a>
+				<a class="down" href="#">&#x25BC;</a>
+			</aside>
+
+			<!-- Displays presentation progress, max value changes via JS to reflect # of slides -->
+			<div class="progress"><span></span></div>
+			
+		</div>
+
+		<!-- Optional libraries for code syntax highlighting and classList support in IE9 -->
+		<script src="lib/highlight.js"></script>
+		<script src="lib/classList.js"></script>
+		<script src="lib/carousel.js"></script>
+		
+		<script src="js/reveal.js"></script>
+		
+		<script>
+			// Parse the query string into a key/value object
+			var query = {};
+			location.search.replace( /[A-Z0-9]+?=(\w*)/gi, function(a) {
+				query[ a.split( '=' ).shift() ] = a.split( '=' ).pop();
+			} );
+
+			// Fires when a slide with data-state=customevent is activated
+			Reveal.addEventListener( 'customevent', function() {
+				alert( '"customevent" has fired' );
+			} );
+
+			// Fires each time a new slide is activated
+			Reveal.addEventListener( 'slidechanged', function( event ) {
+				// event.previousSlide, event.currentSlide, event.indexh, event.indexv
+			} );
+
+			Reveal.initialize({
+				// Display controls in the bottom right corner
+				controls: true,
+
+				// Display a presentation progress bar
+				progress: true,
+
+				// If true; each slide will be pushed to the browser history
+				history: true,
+
+				// Loops the presentation, defaults to false
+				loop: false,
+
+				// Flags if mouse wheel navigation should be enabled
+				mouseWheel: true,
+
+				// Apply a 3D roll to links on hover
+				rollingLinks: true,
+
+				// UI style
+				theme: query.theme || 'default', // default/neon
+
+				// Transition style
+				transition: query.transition || 'default' // default/cube/page/concave/linear(2d)
+			});
+
+			hljs.initHighlightingOnLoad();
+		</script>
+
+	</body>
+</html>
