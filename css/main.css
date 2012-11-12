@@ -171,8 +171,23 @@ body {
 	margin-left: 40px;
 }
 
+.reveal ul.dont {
+  list-style-type: none;
+  position: relative;
+}
+.reveal ul.dont li {
+  margin-top: .5em;
+}
+.reveal ul.dont li:before {
+  content: '\2717   ';
+  color: red;
+  position: absolute;
+  left: -1em;
+}
+
 .reveal ul.checks {
   list-style-type: none;
+  position: relative;
 }
 .reveal ul.checks li {
   margin-top: .5em;
@@ -180,6 +195,8 @@ body {
 .reveal ul.checks li:before {
   content: '\2714   ';
   color: green;
+  position: absolute;
+  left: -1em;
 }
 .reveal ul.white li:before {
   color: white;
