@@ -1032,6 +1032,12 @@ img.bare {
   color: #fff;
 }
 
+.fingerprint .state-background {
+  background: #fff url(http://www.columbiapd.net/images/fingerprint_8yys.jpg) no-repeat right bottom;
+}
+.fingerprint .reveal section {
+  text-align: left;
+}
 
 
 

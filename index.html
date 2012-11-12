@@ -97,7 +97,7 @@
             </ul>
             <br>
             <ul class="checks fragment">
-              <li>Make interface and content<br> decisions in the browser
+              <li>Make interface and content<br> decisions within the browser
             </ul>
           </section>
           <section>
@@ -115,6 +115,21 @@
             <p class="fragment">Mobile can do more than desktop</p>
             <p class="fragment">Location, compass, orientation,<br> camera, vibration, phone calls&hellip;</p>
           </section>
+        </section>
+
+        <section>
+          <h2>Topics</h2>
+          <br>
+          <p class="fragment"><b>Frontend development:</b> Help teams build/debug faster</p>
+          <br>
+          <p class="fragment"><b>Web Performance:</b> Make pages load faster</p>
+          <br>
+          <p class="fragment"><b>Drupal-specific tools:</b> Automate within Drupal</p>
+        </section>
+
+        <section data-state="blackout">
+          <br><br><br><br>
+          <h2>Frontend Development</h2>
         </section>
 
         <section>
@@ -166,6 +181,19 @@
             <p class="fragment">Better compatibility options for old browsers</p>
             <p class="fragment">Live testing helps spot issues more quickly</p>
           </section>
+          <section>
+            <br>
+            <h3>Tools</h3>
+            <ul>
+              <li><a href="http://sass-lang.com">Sass</a>, a CSS preprocessor
+              <li><a href="http://compass-style.org">Compass</a>, a framework built on Sass
+              <li><a href="https://github.com/ksmandersen/compass-normalize">Compass-normalize</a>, a reset stylesheet
+              <li><a href="http://susy.oddbird.net">Susy</a>, a fluid, responsive grid system
+              <li><a href="https://github.com/canarymason/breakpoint">Breakpoint</a> creates reusable media queries
+              <li><a href="https://github.com/snugug/respond-to">Respond-to</a> makes Breakpoint better
+              <li><a href="http://singularity.gs">Singularity</a>, an asymmetric grid system
+            </ul>
+          </section>
         </section>
 
         <section>
@@ -185,6 +213,17 @@
               <li>Start relying on honest browsers
             </ul>
           </section>
+          <section data-state="fingerprint">
+            <br>
+            <h3>Modernizr</h3>
+            <ul class="checks fragment">
+              <li>Detects the individual<br> features of a browser
+              <li><code>user-agent</code> is a browser's name
+              <li>Modernizr takes a fingerprint
+            </ul>
+            <br><br>
+            <p class="fragment">Code: <a href="http://modernizr.com">http://modernizr.com</a></p>
+          </section>
           <section>
             <br>
             <h3>Conditional loading</h3>
@@ -197,21 +236,36 @@
           </section>
           <section>
             <br>
-            <h3>Modernizr</h3>
-            <ul class="checks fragment">
-              <li>Detects the individual<br> features of a browser
-              <li>Loads only what the<br> browser needs
-              <li>Fewer assets loaded<br> means faster page loads
+            <h3>Modernizr.load()</h3>
+            <ul class="fragment">
+              <li>A general-purpose conditional loader
+              <li>Loads only what the browser needs
+              <li>Fewer assets loaded means<br> faster page loads
+            </ul>
           </section>
           <section>
             <br>
             <h3>eCSSential</h3>
+            <p>A single-purpose conditional loader</p>
             <ul class="checks fragment">
               <li>Tests for screen dimensions
               <li><b>Directly</b> loads CSS that <i>will</i> be used
               <li><b>Lazy-loads</b> CSS that <i>might</i> be used
               <li><b>Ignores</b> CSS that <i>cannot</i> be used
             </ul>
+          </section>
+          <section>
+            <br>
+            <h3>Picturefill</h3>
+            <p class="fragment">Picturefill was developed to explore <b>responsive images</b> before a native browser implementation emerges.</p>
+            <br><br>
+            <p class="fragment"><b>Code:</b> <a href="https://github.com/scottjehl/picturefill/">https://github.com/scottjehl/picturefill/</a></p>
+          </section>
+          <section>
+            <br>
+            <h3>Responsive Images</h3>
+            <br>
+            <p class="fragment">Official home of the W3 <a href="http://responsiveimages.org/">Responsive Images Community Group</a></p>
           </section>
         </section>
 
@@ -305,8 +359,8 @@
         <section>
           <h2>JavaScript</h2>
           <section>
-            <h3>Modernizr 7.x-3.0</h3>
-            <p>Modernizr API<br> Available to all themes and modules.</p>
+            <h3 class="fragment">Modernizr 7.x-3.0</h3>
+            <p class="fragment">Modernizr API<br> Available to all themes and modules.</p>
             <ul class="fragment checks">
               <li>Drush commands
               <li>Libraries API integration
@@ -320,7 +374,7 @@
           <section>
             <br>
             <h3>Speedy</h3>
-            <p>Minify core Drupal JS files to make them smaller and decrease download time.</p>
+            <p>Minify core Drupal JS files to make them<br> smaller and decrease download time.</p>
             <br>
             <p class="fragment"><b>Code:</b> <a href="http://drupal.org/project/speedy">http://drupal.org/project/speedy</a></p>
           </section>
