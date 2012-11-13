@@ -54,6 +54,10 @@
           <section>
             <img src="img/4k-logo-square-500px.png" alt="Four Kitchens: we make BIG websites" style="border: 0; box-shadow: none; ">
           </section>
+          <section data-state="blackout">
+            <br><br>
+            <img src="img/pressflow-logo.png" alt="Pressflow makes Drupal scale" style="border: 0; box-shadow: none; background: transparent; ">
+          </section>
           <section>
             <h3>I do Drupal stuff sometimes:</h3>
             <ul class="fragment">
@@ -112,8 +116,10 @@
           <section>
             <br>
             <h3>Functional</h3>
+            <br>
             <p class="fragment">Mobile can do more than desktop</p>
-            <p class="fragment">Location, compass, orientation,<br> camera, vibration, phone calls&hellip;</p>
+            <br>
+            <p class="fragment">Touch, location, compass, orientation,<br> camera, vibration, phone calls&hellip;</p>
           </section>
         </section>
 
@@ -136,8 +142,8 @@
           <h2>Sass + Compass</h2>
           <section>
             <br>
-            <div style="background-image: url(http://sass-lang.com/images/sass.gif); width: 220px; height: 300px; margin: 0 auto; background-repeat: no-repeat; "></div>
-            <div style="background-image: url(http://compass-style.org/images/compass-logo.png); width: 423px; height: 86px; margin: 0 auto; background-repeat: no-repeat; background-position: 0 -86px; "></div>
+            <div style="background-image: url(img/sass.gif); width: 220px; height: 300px; margin: 0 auto; background-repeat: no-repeat; "></div>
+            <div style="background-image: url(img/compass-logo.png); width: 423px; height: 86px; margin: 0 auto; background-repeat: no-repeat; background-position: 0 -86px; "></div>
           </section>
           <section>
             <br>
@@ -198,74 +204,135 @@
 
         <section>
           <h2>JavaScript</h2>
+          <br><br>
+          <div style="background-image: url(http://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png); width: 320px; height: 320px; margin: 0 auto; background-repeat: no-repeat; background-size: contain; "></div>
+        </section>
+
+        <section>
+          <h2>Conditional loading</h2>
           <section>
+            <br>
+            <h3 class="fragment">before we start...</h3>
             <br><br>
-            <div style="background-image: url(http://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png); width: 320px; height: 320px; margin: 0 auto; background-repeat: no-repeat; background-size: contain; "></div>
+            <p class="fragment">let's talk about <b><i>conditional loading</i></b></p>
           </section>
           <section>
-            <br>
-            <h3>Feature Detection</h3>
-            <br>
-            <ul class="dont fragment">
-              <li>Stop relying on nosey servers
-            </ul>
-            <ul class="checks fragment">
-              <li>Start relying on honest browsers
-            </ul>
-          </section>
-          <section data-state="fingerprint">
-            <br>
-            <h3>Modernizr</h3>
-            <ul class="checks fragment">
-              <li>Detects the individual<br> features of a browser
-              <li><code>user-agent</code> is a browser's name
-              <li>Modernizr takes a fingerprint
-            </ul>
+            <p>Load things based on tests</p>
             <br><br>
-            <p class="fragment">Code: <a href="http://modernizr.com">http://modernizr.com</a></p>
-          </section>
-          <section>
-            <br>
-            <h3>Conditional loading</h3>
-            <p class="fragment">Load things based on:</p>
             <ul class="fragment checks">
               <li>Browser properties
               <li>Browser features
-              <li>User actions or<br> preferences
+              <li>User actions or preferences
             </ul>
           </section>
+        </section>
+
+        <section>
           <section>
-            <br>
-            <h3>Modernizr.load()</h3>
-            <ul class="fragment">
-              <li>A general-purpose conditional loader
-              <li>Loads only what the browser needs
-              <li>Fewer assets loaded means<br> faster page loads
-            </ul>
+            <h3>SouthStreet</h3>
+            <p>by Filament Group</p>
           </section>
           <section>
-            <br>
-            <h3>eCSSential</h3>
-            <p>A single-purpose conditional loader</p>
-            <ul class="checks fragment">
-              <li>Tests for screen dimensions
-              <li><b>Directly</b> loads CSS that <i>will</i> be used
-              <li><b>Lazy-loads</b> CSS that <i>might</i> be used
-              <li><b>Ignores</b> CSS that <i>cannot</i> be used
-            </ul>
+            <br><br><br>
+            <h2>eCSSential</h2>
+          </section>
+          <section data-state="alert">
+            <br><br>
+            <p><i>Problem:</i><br></p>
+            <p>CSS is loaded when it is not needed.</p><br><br>
+            <p class="fragment">Sometimes it will never be used.<br> It's just dead weight.</p>
+            </p>
           </section>
           <section>
-            <br>
-            <h3>Picturefill</h3>
-            <p class="fragment">Picturefill was developed to explore <b>responsive images</b> before a native browser implementation emerges.</p>
+            <br><br>
+            <p class="example">
+              <i>Example:</i><br>
+              mobile phone downloading CSS with<br>
+              <code>@media (min-width: 1400px)</code><br>
+              <span class="fragment">then it downloads your big background images</span>
+            </p>
+            <br><br>
+            <small class="fragment">Data: <a href="http://scottjehl.github.com/CSS-Download-Tests/">http://scottjehl.github.com/CSS-Download-Tests/</a></small>
+          </section>
+          <section data-state="soothe">
+            <br><br><br>
+            <p><i>Solution:</i></p>
+            <p>
+              <b>Directly load</b> CSS that <i>will</i> be used.<br>
+              <b>Lazy-load</b> CSS that <i>might</i> be used.<br>
+              <b>Ignore</b> CSS that <i>cannot</i> be used.
+            </p>
+            <br><br>
+            <p class="fragment"><b>Code:</b> <a href="https://github.com/scottjehl/eCSSential">https://github.com/scottjehl/eCSSential</a></p>
+          </section>
+          <section>
+            <br><br><br>
+            <h2>Picturefill</h2>
+          </section>
+          <section data-state="alert">
+            <br><br>
+            <p>
+              <i>Problem:</i><br>
+              We need different images for different contexts.<br>
+              This affects usability and page weight.
+            </p>
+          </section>
+          <section data-state="soothe">
+            <br><br><br>
+            <p>Picturefill was developed to explore <b>responsive images</b> before a native browser implementation emerges.</p>
             <br><br>
             <p class="fragment"><b>Code:</b> <a href="https://github.com/scottjehl/picturefill/">https://github.com/scottjehl/picturefill/</a></p>
           </section>
+        </section>
+
+        <section>
+          <section>
+            <br><br>
+            <h2>Modernizr</h2>
+          </section>
+          <section data-state="alert">
+            <br><br><br>
+            <p>
+              <i>Problem:</i> user-agent sniffing is error-prone;<br>
+              unable to scale as more devices are created
+            </p>
+          </section>
+          <section data-state="fingerprint">
+            <br><br>
+            <p><i>Explanation:</i></p>
+            <p><code>user-agent</code> sniffing is<br> like knowing a person's name</p>
+            <br>
+            <p>Modernizr tests are like<br> having a fingerprint</p>
+          </section>
+          <section data-state="soothe">
+            <br><br><br>
+            <p><i>Solution:</i> Detect individual features on each browser</p>
+            <br>
+            <p class="fragment">
+              <b>Bonus:</b> includes a conditional loader called yepnope.js
+            </p>
+            <br>
+            <p class="fragment"><b>Code:</b> <a href="http://www.modernizr.com">http://www.modernizr.com</a></p>
+          </section>
+        </section>
+
+        <section>
           <section>
             <br>
-            <h3>Responsive Images</h3>
+            <h2>Conditional content</h2>
+          </section>
+          <section>
+            <h3>Anchor-include pattern</h3>
+            <p>Conditionally load <i>content</i>,<br> <small>provided it exists at its own self-contained URI</small></p>
+            <p class="fragment"><img src="img/anchor-include.png" alt="" class="bare"></p>
             <br>
-            <p class="fragment">Official home of the W3 <a href="http://responsiveimages.org/">Responsive Images Community Group</a></p>
+            <p class="fragment">Code: <a href="https://gist.github.com/983328">https://gist.github.com/983328</a>
+          </section>
+          <section>
+            <h2>Third-party libraries</h2>
+            <p>Consider conditional loading for optional widgets</p>
+            <br>
+            <p class="fragment"><i>Examples:</i> Social widgets, sharing tools</p>
           </section>
         </section>
 
@@ -277,10 +344,56 @@
         </section>
 
         <section>
-          <h2>Web performance testing</h2>
+          <section>
+            <h3>Network waterfalls</h3>
+            <p>The first step to debug load-time issues</p>
+          </section>
+          <section data-state="big-img">
+            <p>
+              <img src="img/devtools-waterfall-1.png" alt="Chrome's network waterfall tools." style="width: 1149px; height: 593px; "><br>
+              <caption>Waterfalls show the sequence and timing of your browser's network activity as it assembles a web page.</caption>
+            </p>
+          </section>
+          <section data-state="big-img">
+            <p>
+              <img src="img/devtools-waterfall-2.png" alt="Chrome's network waterfall tools: total number of requests" style="width: 1149px; height: 593px; "><br>
+              <caption>Total number of requests required to assemble web page.</caption>
+            </p>
+          </section>
+          <section data-state="big-img">
+            <p>
+              <img src="img/devtools-waterfall-3.png" alt="Chrome's network waterfall tools: total page weight." style="width: 1149px; height: 593px; "><br>
+              <caption>Total amount of data transferred to assemble web page (page weight).</caption>
+            </p>
+          </section>
+          <section data-state="big-img">
+            <p>
+              <img src="img/devtools-waterfall-4.png" alt="Chrome's network waterfall tools: total time required." style="width: 1149px; height: 593px; "><br>
+              <caption>Total amount of time required to assemble web page.</caption>
+            </p>
+          </section>
+          <section data-state="big-img">
+            <p>
+              <img src="img/devtools-waterfall-5.png" alt="Chrome's network waterfall tools: time to DOMContentLoaded." style="width: 1149px; height: 593px; "><br>
+              <caption>
+                Total amount of time before the DOM is ready.<br>
+                Users start to "feel" like the webpage has loaded.<br>
+                <small>jQuery does not execute until this event has occurred.</small>
+              </caption>
+            </p>
+          </section>
+          <section>
+            <h3>More info</h3>
+            <br>
+            <p>&hellip;about <a href="http://j.mp/browser-devtools-2012">Frontend tooling @ jQuery UK 2012</a></p>
+            <p>&hellip;about <a href="http://j.mp/waterfall-webperf">using waterfall charts to interpret webperf data</a></p>
+          </section>
+        </section>
+
+        <section>
           <section>
             <br>
-            <h3 class="fragment"><a href="http://developer.yahoo.com/yslow/">YSlow</a></h3>
+            <h3 class="fragment"><a href="http://yslow.org">YSlow</a></h3>
             <br>
             <div class="fragment">
               <p>Grades your web pages and makes suggestions to improve your frontend performance</p>
@@ -351,17 +464,29 @@
             <p class="fragment">Base theme doesn't matter. However, there are themes with excellent Sass and Compass support</p>
             <ul class="checks fragment">
               <li><a href="http://drupal.org/project/aurora">Aurora 7.x-2.x</a> - comes with a Compass extension to set subthemes up, full integration with Compass tools: Susy, Singularity, Respond-to
-              <li><a href="http://drupal.org/project/aurora">Zen 7.x-5.x</a> - includes Zen Grids, works with Susy
+              <li><a href="http://drupal.org/project/aurora">Zen 7.x-5.x</a> - includes Zen Grids, works with Susy and Respond-to, very battle-tested within Drupal
             </ul>
           </section>
         </section>
 
         <section>
-          <h2>JavaScript</h2>
+          <h2>Modules</h2>
+        </section>
+        <section>
           <section>
-            <h3 class="fragment">Modernizr 7.x-3.0</h3>
-            <p class="fragment">Modernizr API<br> Available to all themes and modules.</p>
-            <ul class="fragment checks">
+            <br>
+            <h2>Modernizr 7.x-3.0</h2>
+          </section>
+          <section data-state="alert">
+            <br><br>
+            <p><i>Problem:</i> sometimes it's hard to keep track of what Modernizr tests your Drupal site needs.</p>
+            <br>
+            <p class="fragment"><i>Another problem:</i> themes and modules need to consitionally load things based on said tests.</p>
+          </section>
+          <section data-state="soothe">
+            <br><br>
+            <p>Modernizr API<br> Available to all themes and modules.</p>
+            <ul class="fragment checks white" style="position: relative; left: 2em;">
               <li>Drush commands
               <li>Libraries API integration
               <li>Modernizr.load() integration
@@ -373,14 +498,28 @@
           </section>
           <section>
             <br>
-            <h3>Speedy</h3>
-            <p>Minify core Drupal JS files to make them<br> smaller and decrease download time.</p>
+            <h2>Speedy</h2>
+          </section>
+          <section data-state="alert">
+            <br><br><br>
+            <p><i>Problem:</i> most JS within Drupal core is not minified.</p>
+            <br>
+            <p class="fragment"><b>Read:</b> <a href="http://engineeredweb.com/blog/why-minify-javascript/">How does minifying JS help performance?</a></p>
+          </section>
+          <section data-state="soothe">
+            <br><br><br>
+            <p><i>Solution:</i> Minify files to make them smaller and decrease download time.</p>
             <br>
             <p class="fragment"><b>Code:</b> <a href="http://drupal.org/project/speedy">http://drupal.org/project/speedy</a></p>
           </section>
           <section>
+            <br><br>
+            <h2>Picturefill</h2>
             <br>
-            <h3>Picturefill</h3>
+            <p class="fragment">(again)</p>
+          </section>
+          <section>
+            <br><br>
             <p>D7 - Module available at <a href="http://drupal.org/project/resp_img">http://drupal.org/project/resp_img</a></p>
             <br>
             <p class="fragment">D8 - Core implementation has been committed!<br> <a href="http://drupal.org/node/1775530#comment-6684666">http://drupal.org/node/1775530</a></p>
@@ -389,7 +528,7 @@
           </section>
           <section>
             <br>
-            <h3>Navigation Timing</h3>
+            <h2>Navigation Timing</h2>
             <p>Integrates navigation timing into any Drupal site.</p>
             <br>
             <p class="fragment">Needs a UI, but provides all the data you need</p>
