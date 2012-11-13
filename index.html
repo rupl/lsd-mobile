@@ -65,7 +65,7 @@
               <li><a href="http://drupal.org/project/respondjs">http://drupal.org/project/respondjs</a>
               <li><a href="http://groups.drupal.org/html5/drupal-8">D8 HTML5 Initative</a>
               <li><a href="http://groups.drupal.org/mobile/drupal-8">D8 Mobile Initiative</a>
-              <li><a href="http://drupal.org/community-initiatives/drupalorg/drupal7">drupal.org D7 upgrade</a>
+              <li><a href="http://drupal.org/community-initiatives/drupalorg/drupal7">Drupal.org D7 upgrade</a>
               <li><a href="http://drushmake.me">http://drushmake.me</a>
             </ul>
           </section>
@@ -101,16 +101,16 @@
             </ul>
             <br>
             <ul class="checks fragment">
-              <li>Make interface and content<br> decisions within the browser
+              <li>Make interface and content decisions<br> within the browser
             </ul>
           </section>
           <section>
             <br>
             <h3>Maintainable</h3>
-            <ul class="checks fragment">
-              <li>One set of costs
-              <li>One codebase
-              <li>One platform that<br> works everywhere
+            <ul class="checks">
+              <li class="fragment">One set of costs
+              <li class="fragment">One codebase
+              <li class="fragment">One platform that<br> works everywhere
             </ul>
           </section>
           <section>
@@ -119,7 +119,16 @@
             <br>
             <p class="fragment">Mobile can do more than desktop</p>
             <br>
-            <p class="fragment">Touch, location, compass, orientation,<br> camera, vibration, phone calls&hellip;</p>
+            <p class="fragment">
+              Touch,
+              <span style="color: #666; ">location,</span>
+              <span style="color: #777; ">compass,</span>
+              <span style="color: #888; ">orientation,</span>
+              <br>
+              <span style="color: #999; ">camera,</span>
+              <span style="color: #aaa; ">vibration,</span>
+              <span style="color: #bbb; ">phone calls</span><span style="color: #ccc; ">&hellip;</span>
+            </p>
           </section>
         </section>
 
@@ -142,8 +151,8 @@
           <h2>Sass + Compass</h2>
           <section>
             <br>
-            <div style="background-image: url(img/sass.gif); width: 220px; height: 300px; margin: 0 auto; background-repeat: no-repeat; "></div>
-            <div style="background-image: url(img/compass-logo.png); width: 423px; height: 86px; margin: 0 auto; background-repeat: no-repeat; background-position: 0 -86px; "></div>
+            <div class="fragment" style="background-image: url(img/sass.gif); width: 220px; height: 300px; margin: 0 auto; background-repeat: no-repeat; "></div>
+            <div class="fragment" style="background-image: url(img/compass-logo.png); width: 423px; height: 86px; margin: 0 auto; background-repeat: no-repeat; background-position: 0 -86px; "></div>
           </section>
           <section>
             <br>
@@ -190,7 +199,7 @@
           <section>
             <br>
             <h3>Tools</h3>
-            <ul>
+            <ul style="position: relative; left: 1.6em; list-style-type: none; ">
               <li><a href="http://sass-lang.com">Sass</a>, a CSS preprocessor
               <li><a href="http://compass-style.org">Compass</a>, a framework built on Sass
               <li><a href="https://github.com/ksmandersen/compass-normalize">Compass-normalize</a>, a reset stylesheet
@@ -217,9 +226,12 @@
             <p class="fragment">let's talk about <b><i>conditional loading</i></b></p>
           </section>
           <section>
-            <p>Load things based on tests</p>
+            <ul class="dont">
+              <li>Don't rely on direct loading via HTML
+            </ul>
             <br><br>
-            <ul class="fragment checks">
+            <p class="fragment">Load things based on JS tests:</p>
+            <ul class="fragment checks" style="position: relative; left: 1em; ">
               <li>Browser properties
               <li>Browser features
               <li>User actions or preferences
@@ -300,7 +312,7 @@
           <section data-state="fingerprint">
             <br><br>
             <p><i>Explanation:</i></p>
-            <p><code>user-agent</code> sniffing is<br> like knowing a person's name</p>
+            <p><code>user-agent</code> sniffing is like<br> knowing a person's name</p>
             <br>
             <p>Modernizr tests are like<br> having a fingerprint</p>
           </section>
@@ -393,7 +405,11 @@
         <section>
           <section>
             <br>
-            <h3 class="fragment"><a href="http://yslow.org">YSlow</a></h3>
+            <h3>Hosted performance tools</h3>
+          </section>
+          <section>
+            <br>
+            <h3><a href="http://yslow.org">YSlow</a></h3>
             <br>
             <div class="fragment">
               <p>Grades your web pages and makes suggestions to improve your frontend performance</p>
@@ -461,7 +477,7 @@
         <section>
           <h2>Themes</h2>
           <section>
-            <p class="fragment">Base theme doesn't matter. However, there are themes with excellent Sass and Compass support</p>
+            <p class="fragment">Base theme rarely matters. However, there are themes with excellent Sass and Compass support</p>
             <ul class="checks fragment">
               <li><a href="http://drupal.org/project/aurora">Aurora 7.x-2.x</a> - comes with a Compass extension to set subthemes up, full integration with Compass tools: Susy, Singularity, Respond-to
               <li><a href="http://drupal.org/project/aurora">Zen 7.x-5.x</a> - includes Zen Grids, works with Susy and Respond-to, very battle-tested within Drupal
@@ -515,14 +531,12 @@
           <section>
             <br><br>
             <h2>Picturefill</h2>
-            <br>
-            <p class="fragment">(again)</p>
+            <br><br>
+            <p class="fragment">D7 - Module available at <a href="http://drupal.org/project/resp_img">http://drupal.org/project/resp_img</a></p>
           </section>
           <section>
-            <br><br>
-            <p>D7 - Module available at <a href="http://drupal.org/project/resp_img">http://drupal.org/project/resp_img</a></p>
-            <br>
-            <p class="fragment">D8 - Core implementation has been committed!<br> <a href="http://drupal.org/node/1775530#comment-6684666">http://drupal.org/node/1775530</a></p>
+            <br><br><br>
+            <p>D8 - Core implementation has been committed!<br> <a href="http://drupal.org/node/1775530#comment-6684666">http://drupal.org/node/1775530</a></p>
             <br>
             <p class="fragment">Drupal 8 efforts have helped <a href="http://www.w3.org/community/respimg/2012/08/04/picture-in-drupal-8/">influence the formation of this web standard</a></p>
           </section>
