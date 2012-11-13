@@ -1,3 +1,1 @@
-# Mobile webinar
-
-Slides for the Large Scale Drupal mobile webinar
+# This branch is for Github Pages only!
